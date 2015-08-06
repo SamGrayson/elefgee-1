@@ -2439,6 +2439,9 @@ FEED PAGE
     -ms-flex-align: center;
     align-items: center; }
     .feedMain > div > section > div > div:first-of-type {
+      -webkit-box-ordinal-group: 3;
+      -webkit-order: 2;
+      -ms-flex-order: 2;
       order: 2;
       width: 100%;
       height: 75%; }
@@ -2460,7 +2463,10 @@ FEED PAGE
     .feedMain > div > section > div > div:last-of-type {
       width: 100%;
       height: 25%;
-      order: 1;
+      -webkit-box-ordinal-group: 3;
+      -webkit-order: 2;
+      -ms-flex-order: 2;
+      order: 2;
       position: relative;
       display: -webkit-box;
       display: -webkit-flex;
@@ -2825,6 +2831,9 @@ ACCOUNT PAGE
     -ms-flex-align: center;
     align-items: center; }
     .accountPostBlock > div:first-of-type {
+      -webkit-box-ordinal-group: 3;
+      -webkit-order: 2;
+      -ms-flex-order: 2;
       order: 2;
       width: 100%;
       height: 75%; }
@@ -2846,7 +2855,10 @@ ACCOUNT PAGE
     .accountPostBlock > div:last-of-type {
       width: 100%;
       height: 25%;
-      order: 1;
+      -webkit-box-ordinal-group: 3;
+      -webkit-order: 2;
+      -ms-flex-order: 2;
+      order: 2;
       position: relative;
       display: -webkit-box;
       display: -webkit-flex;
