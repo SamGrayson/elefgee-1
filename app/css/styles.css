@@ -2566,10 +2566,10 @@ FEED PAGE
         -webkit-flex-direction: row;
         -ms-flex-direction: row;
         flex-direction: row;
-        -webkit-box-pack: center;
-        -webkit-justify-content: center;
-        -ms-flex-pack: center;
-        justify-content: center;
+        -webkit-box-pack: flex-start;
+        -webkit-justify-content: flex-start;
+        -ms-flex-pack: flex-start;
+        justify-content: flex-start;
         -webkit-box-align: flex-start;
         -webkit-align-items: flex-start;
         -ms-flex-align: flex-start;
@@ -2601,13 +2601,10 @@ FEED PAGE
             -ms-flex-align: center;
             align-items: center; }
             .feedMain > div > section > div > div:last-of-type > div:nth-of-type(2) > a:first-of-type > div > img {
-              display: inline-block;
               width: 27.5px;
               height: 27.5px;
               border-radius: 50%;
-              position: absolute;
-              left: 2.5px;
-              top: 2px; }
+              margin: 0 5px; }
         .feedMain > div > section > div > div:last-of-type > div:nth-of-type(2) > a:last-of-type {
           width: auto;
           text-align: center;
@@ -2959,16 +2956,17 @@ ACCOUNT PAGE
         -webkit-flex-direction: row;
         -ms-flex-direction: row;
         flex-direction: row;
-        -webkit-box-pack: center;
-        -webkit-justify-content: center;
-        -ms-flex-pack: center;
-        justify-content: center;
+        -webkit-box-pack: flex-start;
+        -webkit-justify-content: flex-start;
+        -ms-flex-pack: flex-start;
+        justify-content: flex-start;
         -webkit-box-align: flex-start;
         -webkit-align-items: flex-start;
         -ms-flex-align: flex-start;
         align-items: flex-start; }
         .accountPostBlock > div:last-of-type > div:nth-of-type(2) > a:first-of-type {
           padding-top: 5px;
+          margin-left: 5px;
           display: inline-block;
           width: auto;
           -webkit-transition: all .25s ease;
