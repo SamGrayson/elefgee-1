@@ -14,7 +14,7 @@ HEADER
   > div {
     height: 100%;
     @include flexbox(row, center, center);
-    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;-ms-flex-wrap: wrap;flex-wrap: wrap;
 
     > div {
       height: 100%;

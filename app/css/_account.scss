@@ -463,12 +463,12 @@
   width: 80%;
   margin: 0 auto;
   @include flexbox(row, flex-start, center);
-  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;-ms-flex-wrap: wrap;flex-wrap: wrap;
 
   > div {
     width: 33.33%;
     @include flexbox(row, center, center);
-    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;-ms-flex-wrap: wrap;flex-wrap: wrap;
 
     > a {
       color: $wt2;
