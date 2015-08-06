@@ -2511,9 +2511,9 @@ FEED PAGE
       width: 100%;
       height: 25%;
       -webkit-box-ordinal-group: 3;
-      -webkit-order: 2;
-      -ms-flex-order: 2;
-      order: 2;
+      -webkit-order: 1;
+      -ms-flex-order: 1;
+      order: 1;
       position: relative;
       display: -webkit-box;
       display: -webkit-flex;
@@ -2901,9 +2901,9 @@ ACCOUNT PAGE
       width: 100%;
       height: 25%;
       -webkit-box-ordinal-group: 3;
-      -webkit-order: 2;
-      -ms-flex-order: 2;
-      order: 2;
+      -webkit-order: 1;
+      -ms-flex-order: 1;
+      order: 1;
       position: relative;
       display: -webkit-box;
       display: -webkit-flex;
