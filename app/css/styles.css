@@ -54,7 +54,7 @@ HEADER
 **************************/
 .loginHeader {
   position: relative;
-  height: 500px;
+  height: 400px;
   -webkit-transition: all .25s ease;
   transition: all .25s ease; }
   .loginHeader > div:first-of-type {
@@ -1544,9 +1544,9 @@ FOOTER
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
@@ -2086,7 +2086,7 @@ HEADER
   background-image: url("../media/white_wall_hash.png");
   background-position: 50% 55%;
   position: relative;
-  height: 15vh;
+  height: 20vh;
   color: whitesmoke;
   border-bottom: 2px solid #7AAF36;
   display: -webkit-box;

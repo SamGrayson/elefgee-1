@@ -6,7 +6,7 @@ HEADER
   background-image: url('../media/white_wall_hash.png');
   background-position: 50% 55%;
   position: relative;
-  height: 15vh;
+  height: 20vh;
   color: $wt2;
   border-bottom: 2px solid $green;
   @include flexbox(row, center, center);

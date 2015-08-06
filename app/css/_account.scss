@@ -467,7 +467,7 @@
 
   > div {
     width: 33.33%;
-    @include flexbox(row, center, center);
+    @include flexbox(column, center, center);
     -webkit-flex-wrap: wrap;-ms-flex-wrap: wrap;flex-wrap: wrap;
 
     > a {
