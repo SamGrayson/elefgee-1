@@ -41,6 +41,8 @@
           if (foundUser[0] === undefined) {
             $location.path('/BONK');
           } else {
+            $scope.stylist = foundUser[0].stylist;
+            console.log($scope.stylist);
             $scope.user = foundUser[0];
             $scope.games = foundUser[0].games;
             $scope.posts = foundUser[0].posts;

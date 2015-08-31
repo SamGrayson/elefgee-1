@@ -25,7 +25,7 @@ HEADER
     height: 1200px;
     z-index: -100;
     transform: translate(-50%, -50%);
-    @include transition;
+    @include transition; 
   }
 
   > div:last-of-type {
