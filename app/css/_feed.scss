@@ -214,8 +214,7 @@ MAIN
 .feedMain {
   position: relative;
   min-height: 800px;
-  height: 800px;
-
+  height: auto;
   > div {
     height: 100%;
     background-image: url('../media/triangles.png');
