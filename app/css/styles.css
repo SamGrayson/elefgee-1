@@ -602,8 +602,7 @@ MAIN
     .feedMain > div > section {
       margin: 0 auto;
       width: 100%;
-      background-image: url("../media/triangles.png");
-      overflow: scroll; }
+      background-image: url("../media/triangles.png"); }
       .feedMain > div > section > div {
         height: 200px;
         width: 920px;
