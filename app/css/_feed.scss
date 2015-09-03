@@ -220,7 +220,7 @@ MAIN
     min-height: 800px;
     background-image: url('../media/triangles.png');
     padding: 25px 0;
-    @include flexbox(row, center, center);
+    @include flexbox(row, center, flex-start);
 
     > * {
       height: 100%;
