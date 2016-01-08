@@ -6,7 +6,7 @@
   "name": "Steam-Auth",
   "version": "0.0.1",
   "dependencies": {
-    "bower": "^1.4.1",
+    "bower": "^1.7.2",
     "ejs": ">= 0.0.0",
     "express": "2.5.8",
     "jwt-simple": "^0.3.0",

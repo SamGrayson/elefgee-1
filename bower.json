@@ -27,7 +27,7 @@
     "tests"
   ],
   "dependencies": {
-    "bower": "~1.6.5",
+    "bower": "1.7.2",
     "fontawesome": "~4.3.0",
     "underscore": "~1.8.3",
     "jquery": "~2.1.4",
