@@ -56,12 +56,10 @@
       $scope.allPosts = [];
 
       Socket.on('add-post', function(data){
-        console.log('I am from yo IO dawg', data);
         $scope.allPosts.unshift(data);
       })
 
       Socket.on('delete-post', function(data){
-        console.log('I just deleted something.. ya hurd', data);
       })
 
       //// ALL POSTS ////
