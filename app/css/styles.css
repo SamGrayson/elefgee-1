@@ -2798,6 +2798,10 @@ REDIRECT PAGE
     position: relative;
     left: 10px; } }
 @media screen and (max-width: 600px) {
+  .loginFooter {
+    padding: 15px;
+    font-size: 12px; }
+
   .redirectContentWrap .redirectContent {
     height: 60vh; }
 
