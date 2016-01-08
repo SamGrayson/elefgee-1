@@ -605,6 +605,11 @@ REDIRECT PAGE
 
 @media screen and (max-width: 600px) {
 
+  footer {
+    padding: 15px;
+    font-size: 12px;
+  }
+
   .redirectContentWrap .redirectContent {
     height: 60vh;
   }
