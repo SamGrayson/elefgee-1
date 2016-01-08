@@ -49,6 +49,7 @@ app.configure(function() {
   app.use(express.session({ secret: 'oboyitslit' }));
   app.use(passport.initialize());
   app.use('/public', express.static(__dirname + '/public'));
+  app.use('/bower_components',  express.static(__dirname + '/bower_components'));
   app.use(passport.session());
   app.use(app.router);
 });
