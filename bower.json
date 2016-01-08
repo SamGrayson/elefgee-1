@@ -27,10 +27,14 @@
     "tests"
   ],
   "dependencies": {
+    "bower": "~1.6.5",
     "fontawesome": "~4.3.0",
     "underscore": "~1.8.3",
     "jquery": "~2.1.4",
     "normalize.css": "~3.0.3",
     "angular-socket-io": "~0.7.0"
+  },
+  "scripts": {
+    "postinstall": "./node_modules/bower/bin/bower install"
   }
 }
