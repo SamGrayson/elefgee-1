@@ -2,7 +2,7 @@
 
 .bodyOverflow {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -92,7 +92,7 @@
   #accountLevel {
     margin-top: 5px;
     margin-bottom: 0;
-    font-size: .5em;
+    font-size: 12px;
     color: #828282;
   }
 
@@ -147,7 +147,7 @@
 
     .accountRating {
       margin-left: 15px;
-      font-size: .8em;
+      font-size: 18px;
       color: #F2C705;
       @include flexbox(row, center, center);
       span {
@@ -237,7 +237,7 @@
 
 .accountNav {
   height: 75px;
-  width: 100vw;
+  width: 100%;
   border-bottom: 2px solid $green;
   font-family: $sans;
   @include flexbox(row, center, center);
@@ -248,6 +248,7 @@
     color: $wt2;
     background-color: $darkgray;
     height: 100%;
+    font-size: 28px;
     @include transition;
     @include flexbox(row, center, center);
   }
@@ -257,6 +258,7 @@
     color: $wt2;
     background-color: $lightblack;
     height: 100%;
+    font-size: 28px;
     @include transition;
     @include flexbox(row, center, center);
   }
@@ -282,7 +284,7 @@
 
 .infoWrap {
   min-height: 800px;
-  width: 100vw;
+  width: 100%;
   background: url('../media/triangles.png');
 
   .accountInfo {
@@ -375,6 +377,7 @@
 
           > h4 {
             margin-left: 5px;
+            font-size: 24px;
           }
         }
       }
@@ -516,7 +519,7 @@
 
 #totalTime {
   text-align: center;
-  font-size: .5em;
+  font-size: 12px;
   width: 100%;
   color: rgb(130, 130, 130);
   margin-bottom: 30px;

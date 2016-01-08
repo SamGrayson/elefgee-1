@@ -39,13 +39,14 @@ SETUP
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
   color: $pt;
-  font-family: $sans;
+  font-family: $sans !important;
+  font-size: 24px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $sans;
+  font-family: $sans !important;
 }
 
 h1, h2, h3, h4, h5, h6, li, ul {
@@ -54,7 +55,7 @@ h1, h2, h3, h4, h5, h6, li, ul {
 }
 
 ul {
-  list-style-type: none;
+  list-style-type: none !important;
 }
 
 img {
@@ -62,9 +63,9 @@ img {
 }
 
 html {
-  font-size: 24px;
-  font-family: $serif;
-  color: $pt;
+  font-size: 24px !important;
+  font-family: $serif !important;
+  color: $pt !important;
 }
 
 html, body {
@@ -137,7 +138,7 @@ footer {
   color: $wt;
   font-size: 0.6rem;
   height: 100px;
-  @include flexbox(row, center, center);
+  @include flexbox(column, center, center);
 }
 
 .hidden {

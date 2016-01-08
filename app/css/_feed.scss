@@ -2,6 +2,19 @@
 HEADER
 **************************/
 
+.home-info {
+  position: absolute;
+  right: 5px;
+  color: black;
+  z-index: 9999;
+  font-size: 24px;
+  @include transition;
+  &:hover {
+    color: $green;
+    cursor: pointer;
+  }
+}
+
 .feedHeader {
   background-image: url('../media/white_wall_hash.png');
   background-position: 50% 55%;
@@ -155,6 +168,7 @@ MAIN
         text-align: center;
         text-decoration: underline;
         margin: 15px 0;
+        font-size: 28px;
       }
 
       // filter wrapper
@@ -175,6 +189,9 @@ MAIN
 
           > label {
             margin-left: 5px;
+            font-size: 22px;
+            margin-left: 8px;
+            margin-top: 10px;
           }
         }
 
@@ -183,6 +200,7 @@ MAIN
           text-align: center;
           border: 2px solid $darkgray;
           padding: 5px;
+          font-size: 20px;
           @include transition;
 
           &:focus {
@@ -197,7 +215,7 @@ MAIN
   > div:last-of-type {
     background-color: gray;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 20px;
     color: $wt2;
 
     i {
@@ -210,6 +228,16 @@ MAIN
 /**************************
 MAIN
 **************************/
+
+.search {
+  top: -8px;
+  font-size:24px;
+}
+
+.down {
+  top: 12px;
+  font-size:16px;
+}
 
 .feedMain {
   position: relative;
@@ -287,6 +315,7 @@ MAIN
 
                 > h4 {
                   margin-left: 5px;
+                  font-size: 24px;
                 }
               }
             }

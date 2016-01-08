@@ -9,27 +9,28 @@ SETUP
   -webkit-box-sizing: border-box; }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
   color: #212121;
-  font-family: "Roboto", sans-serif; }
+  font-family: "Roboto", sans-serif !important;
+  font-size: 24px; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Roboto", sans-serif; }
+  font-family: "Roboto", sans-serif !important; }
 
 h1, h2, h3, h4, h5, h6, li, ul {
   margin: 0;
   padding: 0; }
 
 ul {
-  list-style-type: none; }
+  list-style-type: none !important; }
 
 img {
   max-width: 100%; }
 
 html {
-  font-size: 24px;
-  font-family: "Roboto Slab", serif;
-  color: #212121; }
+  font-size: 24px !important;
+  font-family: "Roboto Slab", serif !important;
+  color: #212121 !important; }
 
 html, body {
   height: 100%;
@@ -238,6 +239,18 @@ MAIN
 /**************************
 HEADER
 **************************/
+.home-info {
+  position: absolute;
+  right: 5px;
+  color: black;
+  z-index: 9999;
+  font-size: 24px;
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease; }
+  .home-info:hover {
+    color: #7AAF36;
+    cursor: pointer; }
+
 .feedHeader {
   background-image: url("../media/white_wall_hash.png");
   background-position: 50% 55%;
@@ -489,7 +502,8 @@ MAIN
       .feedAside > div:first-of-type > div h3 {
         text-align: center;
         text-decoration: underline;
-        margin: 15px 0; }
+        margin: 15px 0;
+        font-size: 28px; }
       .feedAside > div:first-of-type > div > div {
         display: -webkit-box;
         display: -webkit-flex;
@@ -548,12 +562,16 @@ MAIN
             .feedAside > div:first-of-type > div > div > div > div > input {
               margin-right: 5px; }
           .feedAside > div:first-of-type > div > div > div > label {
-            margin-left: 5px; }
+            margin-left: 5px;
+            font-size: 22px;
+            margin-left: 8px;
+            margin-top: 10px; }
         .feedAside > div:first-of-type > div > div > input[type=text] {
           width: 45%;
           text-align: center;
           border: 2px solid #4D4D4D;
           padding: 5px;
+          font-size: 20px;
           -webkit-transition: all .25s ease;
           transition: all .25s ease; }
           .feedAside > div:first-of-type > div > div > input[type=text]:focus {
@@ -562,7 +580,7 @@ MAIN
   .feedAside > div:last-of-type {
     background-color: gray;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 20px;
     color: whitesmoke; }
     .feedAside > div:last-of-type i {
       cursor: pointer;
@@ -572,6 +590,14 @@ MAIN
 /**************************
 MAIN
 **************************/
+.search {
+  top: -8px;
+  font-size: 24px; }
+
+.down {
+  top: 12px;
+  font-size: 16px; }
+
 .feedMain {
   position: relative;
   min-height: 800px;
@@ -694,7 +720,8 @@ MAIN
                   border-radius: 50%;
                   margin-right: 5px; }
                 .feedMain > div > section > div > div:first-of-type > div:first-of-type > a > div > h4 {
-                  margin-left: 5px; }
+                  margin-left: 5px;
+                  font-size: 24px; }
           .feedMain > div > section > div > div:first-of-type > div:last-of-type {
             height: 75%;
             width: 85%;
@@ -814,7 +841,7 @@ FOOTER
 
 .bodyOverflow {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   overflow: hidden; }
 
 .fa-stack {
@@ -941,7 +968,7 @@ FOOTER
   .accountHeader #accountLevel {
     margin-top: 5px;
     margin-bottom: 0;
-    font-size: .5em;
+    font-size: 12px;
     color: #828282; }
   .accountHeader .accountButtonsWrapper {
     height: 17.5%;
@@ -1056,7 +1083,7 @@ FOOTER
     align-items: center; }
     .accountHeader .accountProfileInfo .accountRating {
       margin-left: 15px;
-      font-size: .8em;
+      font-size: 18px;
       color: #F2C705;
       display: -webkit-box;
       display: -webkit-flex;
@@ -1215,7 +1242,7 @@ FOOTER
 
 .accountNav {
   height: 75px;
-  width: 100vw;
+  width: 100%;
   border-bottom: 2px solid #7AAF36;
   font-family: "Roboto", sans-serif;
   display: -webkit-box;
@@ -1242,6 +1269,7 @@ FOOTER
     color: whitesmoke;
     background-color: #4D4D4D;
     height: 100%;
+    font-size: 28px;
     -webkit-transition: all .25s ease;
     transition: all .25s ease;
     display: -webkit-box;
@@ -1266,6 +1294,7 @@ FOOTER
     color: whitesmoke;
     background-color: #242424;
     height: 100%;
+    font-size: 28px;
     -webkit-transition: all .25s ease;
     transition: all .25s ease;
     display: -webkit-box;
@@ -1300,7 +1329,7 @@ FOOTER
 
 .infoWrap {
   min-height: 800px;
-  width: 100vw;
+  width: 100%;
   background: url("../media/triangles.png"); }
   .infoWrap .accountInfo {
     color: whitesmoke; }
@@ -1414,7 +1443,8 @@ FOOTER
             border-radius: 50%;
             margin-right: 5px; }
           .accountPostBlock > div:first-of-type > div:first-of-type > a > div > h4 {
-            margin-left: 5px; }
+            margin-left: 5px;
+            font-size: 24px; }
     .accountPostBlock > div:first-of-type > div:last-of-type {
       height: 75%;
       width: 85%;
@@ -1592,7 +1622,7 @@ FOOTER
 
 #totalTime {
   text-align: center;
-  font-size: .5em;
+  font-size: 12px;
   width: 100%;
   color: #828282;
   margin-bottom: 30px;
@@ -1667,6 +1697,7 @@ HEADER
           max-height: 100%; }
     .postHeader .postHeaderSearchBlock > div:last-of-type {
       height: 50%;
+      width: 25%;
       background-color: rgba(255, 255, 255, 0.75);
       padding: 5px;
       border: 1px solid #7AAF36;
@@ -1694,7 +1725,8 @@ HEADER
         background: none;
         border: 0;
         text-align: left;
-        padding-left: 10px; }
+        padding-left: 10px;
+        width: 75%; }
         .postHeader .postHeaderSearchBlock > div:last-of-type input:focus {
           outline: 0; }
       .postHeader .postHeaderSearchBlock > div:last-of-type i {
@@ -1719,7 +1751,7 @@ HEADER
   .postHeader .postHeaderGamesBlock {
     width: 95%;
     margin: 0 auto;
-    height: 225px;
+    height: 215px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1747,7 +1779,7 @@ HEADER
       .postHeader .postHeaderGamesBlock .postHeaderGamesWrapper .postHeaderGameBlock {
         position: relative;
         display: inline-block;
-        height: 175px;
+        height: 135px;
         width: 250px;
         margin-right: 25px;
         background-color: #4D4D4D;
@@ -1761,9 +1793,9 @@ HEADER
         .postHeader .postHeaderGamesBlock .postHeaderGamesWrapper .postHeaderGameBlock > i {
           display: none;
           position: absolute;
-          font-size: 3rem;
-          right: -18px;
-          top: -36px;
+          font-size: 50px;
+          right: -22px;
+          top: -26px;
           color: #7AAF36; }
         .postHeader .postHeaderGamesBlock .postHeaderGamesWrapper .postHeaderGameBlock > div:first-of-type {
           height: 60%; }
@@ -2497,7 +2529,8 @@ FEED PAGE
       .feedMain > div > section > div > div:first-of-type > div:last-of-type {
         position: relative;
         height: 100%;
-        font-size: 3.75vw; }
+        font-size: 3.75vw;
+        padding: 10px; }
         .feedMain > div > section > div > div:first-of-type > div:last-of-type .queryTimestamp {
           width: auto;
           height: auto;
@@ -2506,7 +2539,8 @@ FEED PAGE
           bottom: 0;
           right: 0;
           color: gray;
-          font-size: 0.75rem; }
+          font-size: 0.75rem;
+          padding-right: 10px; }
     .feedMain > div > section > div > div:last-of-type {
       width: 100%;
       height: 25%;
@@ -2538,7 +2572,7 @@ FEED PAGE
         width: 30%; }
       .feedMain > div > section > div > div:last-of-type > div:first-of-type {
         position: relative;
-        height: 42.5%;
+        height: 55%;
         width: 100%; }
         .feedMain > div > section > div > div:last-of-type > div:first-of-type a {
           height: 100%;
@@ -2557,6 +2591,8 @@ FEED PAGE
         position: relative;
         width: 100%;
         height: 57.5%;
+        padding-left: 10px;
+        padding-top: 5px;
         display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
@@ -2613,7 +2649,8 @@ FEED PAGE
           top: 0; }
           .feedMain > div > section > div > div:last-of-type > div:nth-of-type(2) > a:last-of-type > i {
             margin-left: 10px;
-            font-size: 1.25rem; }
+            font-size: 1.25rem;
+            padding: 8px; }
       .feedMain > div > section > div > div:last-of-type > div:last-of-type {
         display: none; } }
 @media screen and (max-width: 500px) {
@@ -2674,7 +2711,7 @@ POST PAGE
 **************************/
 @media screen and (max-width: 850px) {
   .postHeader {
-    height: 400px; }
+    height: 380px; }
     .postHeader .postHeaderSearchBlock {
       height: 150px;
       display: -webkit-box;
@@ -2702,12 +2739,13 @@ POST PAGE
           width: 200px; }
       .postHeader .postHeaderSearchBlock > div:last-of-type {
         height: 35%;
-        max-width: 98%; }
+        max-width: 98%;
+        width: 50%; }
         .postHeader .postHeaderSearchBlock > div:last-of-type > input {
           height: 100%;
           width: 100%; }
     .postHeader .postHeaderGamesBlock {
-      height: 250px; }
+      height: 220px; }
       .postHeader .postHeaderGamesBlock .postHeaderGamesWrapper {
         padding: 37.5px 0; }
 
@@ -2724,7 +2762,9 @@ POST PAGE
     width: 98%; } }
 @media screen and (max-width: 650px) {
   .postMain > div:first-of-type > div > div {
-    font-size: 1rem; }
+    font-size: 1rem;
+    width: 100%;
+    height: 10%; }
   .postMain > div:first-of-type > div > div:first-of-type > a > img {
     height: 40px;
     width: 40px; }
@@ -2765,6 +2805,15 @@ REDIRECT PAGE
     height: 115px;
     width: 115px; } }
 @media screen and (max-width: 500px) {
+  .postHeader {
+    height: 340px; }
+    .postHeader .postHeaderGamesBlock {
+      height: 180px; }
+
+  .postHeader .postHeaderGamesBlock .postHeaderGamesWrapper .postHeaderGameBlock {
+    height: 105px;
+    width: 200px; }
+
   .redirectContentWrap .redirectContent .redirect {
     height: 100%; }
 
@@ -2896,7 +2945,8 @@ ACCOUNT PAGE
           bottom: 0;
           right: 0;
           color: gray;
-          font-size: 0.75rem; }
+          font-size: 0.75rem;
+          padding-right: 10px; }
     .accountPostBlock > div:last-of-type {
       width: 100%;
       height: 25%;
@@ -3076,9 +3126,9 @@ footer {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;

@@ -2,7 +2,7 @@
   'use strict';
   angular
     .module('elefgee')
-    .controller('PostController', function($scope, $window, $rootScope, $route, SteamService, PostService, _, $location) {
+    .controller('PostController', function($scope, $window, $rootScope, $route, SteamService, PostService, _, $location, Socket) {
       var alreadySubmitted = false;
       $scope.$route = $route;
       $rootScope.selectedGame = [{name: '-'}];
@@ -60,10 +60,24 @@
             $('#postErrorGame').hide();
           }
         } else {
+
           postData.timestamp = new Date();
+          // EMIT SOCKET
+
+          Socket.emit('add-post', postData)
+
+          //
           SteamService.addPost(postData);
         }
       }
+
+      // SOCKETS
+
+      Socket.connect();
+
+      $scope.$on('$locationChangeStart', function(event){
+        Socket.disconnect(true);
+      })
 
       $scope.checkForDescription = function() {
         var descriptionContent = $scope.post.text;

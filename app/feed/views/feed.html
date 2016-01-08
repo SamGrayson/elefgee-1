@@ -1,4 +1,5 @@
 <div ng-if="loggedIn(me.displayName)">
+<div ng-click="faq()" class="home-info"><i class="fa fa-info-circle"></i></div>
 <header class="feedHeader">
   <div class="feedHeaderBlock">
     <div class="feedHeaderLogo">
@@ -7,14 +8,15 @@
     <div class="feedHeaderName">
       <a href="#/account/{{ me.id }}">
         <img ng-src="{{ me.photos[2].value }}">
-        <span>{{ me.displayName }}</span>
+        <span>{{ me.displayName | limitTo: 13}}{{ me.displayName.length > 13 ? '...' : ''}}</span>
       </a>
     </div>
     <div class="feedHeaderImage">
       <a href="#/account/{{ me.id }}"><img ng-src="{{ me.photos[2].value }}"></a>
     </div>
     <div class="feedHeaderPost">
-      <a href="#/post">LFG</a>
+      <a href="#/post">LFG &nbsp; <i class="fa fa-pencil-square-o" style="font-size:18px;"></i>
+</a>
     </div>
     <div class="feedHeaderLogout">
       <a href="/logout">LOGOUT</a>
@@ -31,6 +33,13 @@
 </nav>
 <aside class="feedAside">
   <div class="feedFilterMain">
+    <div class="searchParameters">
+      <h3>Search</h3>
+      <div>
+        <input type="text" placeholder="Search by username" name="searchPosts" ng-model="searchPosts.displayName">
+        <input type="text" placeholder="Search by game" name="searchPosts" ng-model="searchPosts.name">
+      </div>
+    </div>
     <div class="filterParameters">
       <h3>Sort</h3>
       <div>
@@ -54,16 +63,13 @@
         </div>
       </div>
     </div>
-    <div class="searchParameters">
-      <h3>Search</h3>
-      <div>
-        <input type="text" placeholder="Search by username" name="searchPosts" ng-model="searchPosts.displayName">
-        <input type="text" placeholder="Search by game" name="searchPosts" ng-model="searchPosts.name">
-      </div>
-    </div>
   </div>
   <div class="filterSearchCollapse">
-    <i id="filterCollapse" class="fa fa-chevron-down" ng-click="openFilterBlock()"></i>
+    <!-- <i id="filterCollapse" class="fa fa-search" ng-click="openFilterBlock()"></i> -->
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-search fa-stack-1x search"></i>
+      <i id="filterCollapse" class="fa fa-chevron-down fa-stack-1x down" ng-click="openFilterBlock()"></i>
+    </span>
   </div>
 </aside>
 <main class="feedMain">
@@ -160,6 +166,6 @@
   </div>
 </main>
 <footer class="loginFooter">
-  &copy; 2015 Elefgee, All Rights Reserved
+  ElEfGee is not a part of Valve. All content from Steam is the property of respective game publishers. <a href="store.steampowered.com/" style="color:#7AAF36;font-size:16px;">Powered By Steam</a><br />&copy; 2015 Elefgee, All Rights Reserved
 </footer>
 </div>

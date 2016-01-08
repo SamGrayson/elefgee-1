@@ -2,7 +2,10 @@
   'use strict';
   angular
     .module('elefgee')
-    .controller('FeedController', function($scope, $route, SteamService, $location, $rootScope) {
+    .controller('FeedController', function($scope, $route, SteamService, $location, $rootScope, Socket) {
+
+      Socket.connect();
+
       $scope.navs = [
         {
           name: 'all',
@@ -35,6 +38,10 @@
         }
       }
 
+      $scope.faq = function() {
+        $location.path('/faq');
+      }
+
       $scope.sort('timestamp');
 
       $scope.feedNavClick = function(clicked) {
@@ -46,9 +53,19 @@
        return clickedBtn.active;
       }
 
+      $scope.allPosts = [];
+
+      Socket.on('add-post', function(data){
+        console.log('I am from yo IO dawg', data);
+        $scope.allPosts.unshift(data);
+      })
+
+      Socket.on('delete-post', function(data){
+        console.log('I just deleted something.. ya hurd', data);
+      })
+
       //// ALL POSTS ////
       SteamService.getUserInfo().success(function(data){
-      $scope.allPosts = [];
       _.each(data, function(el, idx, list) {
         _.each(data[idx].posts, function(el2, idx2) {
           $scope.allPosts.push(el2);
@@ -90,11 +107,12 @@
 
     //// REFRESH POSTS ////
 
+    $scope.allPosts = [];
 
       $scope.$route = $route;
 
       if (($location.path()) === '/feed') {
-        setInterval(function() {
+        // setInterval(function() {
         //// ALL POSTS ////
         SteamService.getUserInfo().success(function(data){
         $scope.allPosts = [];
@@ -134,15 +152,14 @@
           })
 
         })
-      })}, 2000);
+      })
     }
 
       SteamService.getMe().success(function (me) {
         $scope.me = me;
-        console.log(me);
         $scope.loggedIn = function(displayName) {
           if (displayName === undefined) {
-            $location.path('/BONK')
+            $location.path('/BONK');
           }
           else if (displayName.length > 0) {
             return true;

@@ -14,7 +14,6 @@
 
       var addPost = function(post) {
         $http.put('/posts', post).success(function(data){
-         console.log('I just posted this data!', data);
          $rootScope.$broadcast('post:added');
          $location.path('/feed');
          $window.scrollTo(0, 0);
@@ -22,9 +21,7 @@
       }
 
       var deletePost = function(post, id) {
-        console.log(post);
         $http.put('/deletePost', post).then(function(data){
-          console.log('I just deleted this data!', data);
           $rootScope.$broadcast('post:deleted');
         })
       }
@@ -32,7 +29,7 @@
       // var addReviewUser = function(user, userReview) {
       //   user.userReview = userReview;
       //   $http.put('/addReview', user).then(function(data){
-      //     console.log('I just added a review!', data)
+      //     ""('I just added a review!', data)
       //     // $rootScope.$broadcast('review:added');
       //   })
       // }
@@ -40,7 +37,6 @@
       var addReview = function(user, userObj) {
         user.userObj = userObj;
         $http.put('/addReview', user).then(function(data){
-          console.log('I just added a review!', data)
           // $rootScope.$broadcast('review:added');
         })
       }
@@ -55,4 +51,9 @@
       };
 
     });
+    angular
+    .module('elefgee')
+    .factory('Socket', ['socketFactory', function(socketFactory){
+      return socketFactory();
+    }])
 })();

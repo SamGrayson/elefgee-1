@@ -6,7 +6,8 @@
       'ngRoute',
       'underscore',
       'account',
-      'angularMoment'
+      'angularMoment',
+      'btford.socket-io'
     ])
     .config(function ($routeProvider) {
       $routeProvider
@@ -19,6 +20,10 @@
         })
         .when('/feed', {
           templateUrl: 'feed/views/feed.html',
+          controller: 'FeedController'
+        })
+        .when('/faq', {
+          templateUrl: 'feed/views/faq.html',
           controller: 'FeedController'
         })
         .when('/post', {

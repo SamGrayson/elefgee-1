@@ -5,7 +5,6 @@ var express = require('express')
 var mongoose = require('mongoose');
 var config = require('./config');
 
-
 mongoose.connect(config.MONGO_URI);
 
 mongoose.connection.on('error', function() {
@@ -21,10 +20,10 @@ passport.deserializeUser(function(obj, done) {
 });
 
 passport.use(new SteamStrategy({
-    // returnURL: 'http://localhost:3000/auth/steam/return',
-    // realm: 'http://localhost:3000',
-    returnURL: 'http://elefgee.heroku.com/auth/steam/return',
-    realm: 'http://elefgee.heroku.com/',
+    returnURL: 'http://localhost:3000/auth/steam/return',
+    realm: 'http://localhost:3000',
+    // returnURL: 'http://elefgee.heroku.com/auth/steam/return',
+    // realm: 'http://elefgee.heroku.com/',
     apiKey: '41AB27857C781D410407E14B482DB2ED'
   },
   function(identifier, profile, done) {
@@ -36,7 +35,7 @@ passport.use(new SteamStrategy({
 ));
 
 var app = express.createServer();
-
+var io = require('socket.io')(app);
 
 // express config
 app.configure(function() {
@@ -56,6 +55,28 @@ app.configure(function() {
 
 app.listen(process.env.PORT || 3000, function(){
   console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+  console.log('listening on *: ' + this.address().port);
 });
 
-require('./routes')(app, passport);
+var routes = require('./routes')(app, passport);
+
+io.on('connection', function (socket){
+  console.log('a user has connected');
+
+  socket.on('add-post', function(data){
+    io.emit('add-post', data);
+  })
+
+  socket.on('delete-post', function(){
+    io.emit('delete-post', app.posts);
+  })
+
+  socket.on('disconnect', function() {
+    console.log('a user has disconnected');
+  });
+});
+
+// http.listen(port, function(){
+  // console.log('listening on *: ' + port);
+  // console.log(process.env.PORT);
+// })

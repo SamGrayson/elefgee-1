@@ -2,10 +2,11 @@
   'use strict';
   angular
     .module('account')
-    .controller('AccountController', function($scope, $route, SteamService, _, $routeParams, $location) {
+    .controller('AccountController', function($scope, $route, SteamService, _, $routeParams, $location, Socket) {
+      Socket.connect();
+
       var ua = navigator.userAgent;
       var isMobile = /Mobile/.test(ua);
-      console.log(isMobile);
 
       if (isMobile) {
         $('#loginAbso').css('opacity', '0');
@@ -42,15 +43,12 @@
             $location.path('/BONK');
           } else {
             $scope.stylist = foundUser[0].stylist;
-            console.log($scope.stylist);
             $scope.user = foundUser[0];
             $scope.games = foundUser[0].games;
             $scope.posts = foundUser[0].posts;
             $scope.rating = foundUser[0].rating;
             $scope.raters = foundUser[0].raters;
             $scope.gamesList = _.sortBy(foundUser[0].games.games, 'name');
-            console.log($scope.user);
-            console.log($scope.raters);
           }
 
           /// Rating ///
@@ -60,7 +58,6 @@
           for (var i = 0; i < accountRating; i++) {
             var rating = document.createElement('i');
             rating.className = 'fa fa-star';
-            console.log('adding star');
             elementAdded.appendChild(rating);
           }
 
@@ -113,33 +110,30 @@
       }
 
       $scope.deletePost = function(time, text, userData) {
-        console.log(userData);
         var selectedPost = {timestamp: time, text: text, userData: userData};
         var id = $routeParams.steamId;
         SteamService.deletePost(selectedPost);
+        Socket.emit('delete-post');
       }
 
       $scope.timeConvert = function(timestamp) {
-        console.log(timestamp)
         return timestamp.getTime();
       }
 
       var postDeletedCallback = function() {
-        console.log('CALLIN BACK');
         SteamService.getUserInfo().success(function(data){
           var routeSteamId = $routeParams.steamId;
           var foundUser = _.where(data, {steamId: routeSteamId});
-          console.log(foundUser[0].posts);
           $scope.posts = foundUser[0].posts;
         });
       }
 
       // var reviewAddedCallback = function() {
-      //   console.log('CALLIN BACK');
+      //   ""('CALLIN BACK');
       //   SteamService.getUserInfo().success(function(data){
       //     var routeSteamId = $routeParams.steamId;
       //     var foundUser = _.where(data, {steamId: routeSteamId});
-      //     console.log(foundUser[0].rating);
+      //     ""(foundUser[0].rating);
       //     $scope.posts = foundUser[0].rating;
       //   });
       // }

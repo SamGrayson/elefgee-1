@@ -2,6 +2,8 @@ var User = require('./models/User');
 var mongoose = require('mongoose');
 var jwt = require('jwt-simple');
 var _ = require('underscore');
+var io = require('socket.io');
+
 
 module.exports = function(app, passport) {
 
@@ -125,7 +127,6 @@ module.exports = function(app, passport) {
 
 
     app.put('/posts', function(req, res, next){  // Look for user with id, push object to 'posts' array, Save the user data
-      console.log('Body',req.body);
 
       User.find({steamId: req.body.userData.id}, function(err, user) {
         console.log('I am the posts!', user[0].posts)
@@ -137,6 +138,7 @@ module.exports = function(app, passport) {
            console.log('Added posts', user);
          })
 
+        app.posts = user[0].posts;
         res.send(user[0]);
       });
 
