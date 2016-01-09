@@ -242,7 +242,7 @@ HEADER
 .home-info {
   position: absolute;
   right: 5px;
-  color: black;
+  color: #4D4D4D;
   z-index: 9999;
   font-size: 24px;
   -webkit-transition: all .25s ease;
@@ -586,6 +586,43 @@ MAIN
       cursor: pointer;
       -webkit-transition: all .25s ease;
       transition: all .25s ease; }
+
+/**************************
+FAQ
+**************************/
+.faq {
+  max-width: 100%;
+  background-image: url("../media/white_wall_hash.png");
+  min-height: 100vh; }
+
+.faq-header {
+  height: 150px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .faq-header a img {
+    height: 125px;
+    widht: 75px; }
+
+.faq-wrap {
+  background-color: white;
+  padding: 50px; }
+  .faq-wrap hr {
+    border-top: 1px solid #7AAF36; }
 
 /**************************
 MAIN
@@ -2940,7 +2977,8 @@ ACCOUNT PAGE
       .accountPostBlock > div:first-of-type > div:last-of-type {
         position: relative;
         height: 100%;
-        font-size: 5vw; }
+        font-size: 5vw;
+        padding: 10px; }
         .accountPostBlock > div:first-of-type > div:last-of-type .queryTimestamp {
           width: auto;
           height: auto;
@@ -2982,7 +3020,7 @@ ACCOUNT PAGE
         width: 30%; }
       .accountPostBlock > div:last-of-type > div:first-of-type {
         position: relative;
-        height: 42.5%;
+        height: 55%;
         width: 100%; }
         .accountPostBlock > div:last-of-type > div:first-of-type a {
           height: 100%;
@@ -3001,6 +3039,8 @@ ACCOUNT PAGE
         position: relative;
         width: 100%;
         height: 57.5%;
+        padding-left: 10px;
+        padding-top: 5px;
         display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
@@ -3056,7 +3096,8 @@ ACCOUNT PAGE
         .accountPostBlock > div:last-of-type > div:nth-of-type(2) > i {
           width: auto;
           position: absolute;
-          right: 2.5px;
+          right: 10px;
+          top: 6px;
           font-size: 1.25rem; }
       .accountPostBlock > div:last-of-type > div:last-of-type {
         display: none; } }

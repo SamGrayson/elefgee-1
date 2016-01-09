@@ -795,6 +795,7 @@ ACCOUNT PAGE
         position: relative;
         height: 100%;
         font-size: 5vw;
+        padding: 10px;
 
         .queryTimestamp {
           width: auto;
@@ -825,7 +826,7 @@ ACCOUNT PAGE
 
       > div:first-of-type {
         position: relative;
-        height: 42.5%;
+        height: 55%;
         width: 100%;
 
         a {
@@ -851,6 +852,8 @@ ACCOUNT PAGE
         position: relative;
         width: 100%;
         height: 57.5%;
+        padding-left: 10px;
+        padding-top: 5px;
         @include flexbox(row, flex-start, flex-start);
 
         > a:first-of-type {
@@ -884,7 +887,8 @@ ACCOUNT PAGE
         > i {
           width: auto;
           position: absolute;
-          right: 2.5px;
+          right: 10px;
+          top: 6px;
           font-size: 1.25rem;
         }
       }

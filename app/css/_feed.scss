@@ -5,7 +5,7 @@ HEADER
 .home-info {
   position: absolute;
   right: 5px;
-  color: black;
+  color: $darkgray;
   z-index: 9999;
   font-size: 24px;
   @include transition;
@@ -222,6 +222,34 @@ MAIN
       cursor: pointer;
       @include transition;
     }
+  }
+}
+
+/**************************
+FAQ
+**************************/
+.faq {
+  max-width: 100%;
+  background-image: url("../media/white_wall_hash.png");
+  min-height: 100vh;
+}
+
+.faq-header {
+  height: 150px;
+  @include flexbox(row, center, center);
+
+  a {
+    img {;
+      height: 125px;
+      widht: 75px;
+    }
+  }
+}
+.faq-wrap {
+  background-color:white;
+  padding: 50px;
+  hr {
+    border-top: 1px solid $green;
   }
 }
 
